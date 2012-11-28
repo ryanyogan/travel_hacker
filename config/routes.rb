@@ -1,4 +1,8 @@
 TravelHacker::Application.routes.draw do
+  get "content/standard"
+
+  get "content/plus"
+
   authenticated :user do
     root :to => 'home#index'
   end
