@@ -1,4 +1,24 @@
-<h3>Home</h3>
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
-<% end %>
+
+<div id="welcome" class="hero-unit span7">
+  <h1>Travel Hacker</h1>
+  <h3>Travel Hacker Member Ship</h3>
+</div>
+<div class="row span8 plans">
+  <div class="span2 well">
+    <div class="plan"><h2>Standard</h2>
+      <ul class="unstyled">
+        <li>This is a free plan</li>
+      </ul>
+      <h3>Dont cost shit</h3>
+      <%= link_to 'Subscribe', content_standard_path, :class => 'btn btn-primary' %>
+    </div>
+    <div class="span2 well featured">
+      <div class="plan featured-plan"><h2>Plus</h2></div>
+      <ul class="unstyled">
+        <li>All Access</li>
+      </ul>
+      <h3>$9.95/month</h3>
+      <%= link_to 'Subscribe', content_plus_path, :class => 'btn btn-primary' %>
+    </div>
+  </div>
+</div>
