@@ -7,7 +7,8 @@
         <li>This is a free plan</li>
       </ul>
       <h3>Dont cost shit</h3>
-      <%= link_to 'Subscribe', content_standard_path, :class => 'btn btn-primary' %>
+      <%= link_to "Subscribe", new_user_registration_path(:plan => 'standard'), 
+        :class => 'btn btn-primary' %>
     </div>
     <div class="span2 well featured">
       <div class="plan featured-plan"><h2>Plus</h2></div>
@@ -15,7 +16,8 @@
         <li>All Access</li>
       </ul>
       <h3>$9.95/month</h3>
-      <%= link_to 'Subscribe', content_plus_path, :class => 'btn btn-primary' %>
+      <%= link_to "Subscribe", new_user_registration_path(:plan => 'plus'),
+        :class => 'btn btn-primary' %>
     </div>
   </div>
 </div>
