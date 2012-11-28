@@ -29,7 +29,7 @@ Learn more about "Installing Rails":http://railsapps.github.com/installing-rails
 
 h2. Database
 
-This application uses SQLite with ActiveRecord.
+This application uses SQLite / PG  with ActiveRecord.
 
 h2. Development
 
@@ -42,23 +42,19 @@ h2. Development
 
 h2. Email
 
-The application is configured to send email using a Gmail account.
+The application is configured to send email using a Gmail account during testing.
 
 h2. Getting Started
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Bleh just ask Ryan Y. @ the moment.
 
 h2. Documentation and Support
 
-This is the only documentation.
+Just look at the code for now brah.
 
 h4. Issues
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-h2. Similar Projects
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+There are no known issues at this time, please keep in mind testing support is limited at the moment as this is still considered a "R&D" application until the stories have been created.
 
 h2. Contributing
 
@@ -67,14 +63,7 @@ If you make improvements to this application, please share with others.
 * Fork the project on GitHub.
 * Make your feature addition or bug fix.
 * Commit with Git.
-* Send the author a pull request.
-
-If you add functionality to this application, create an alternative implementation, or build an application that is similar, please contact me and I'll add a note to the README so that others can find your work.
-
-h2. Credits
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 h2. License
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+2012 ShopSmart, Inc
