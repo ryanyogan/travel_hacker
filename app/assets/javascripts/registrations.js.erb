@@ -1,0 +1,45 @@
+
+$('.registrations').ready(function() {
+  $.externalScript('https://js.stripe.com/v1/').done(function(script, textStatus) {
+    if (typeof Stripe != 'undefined') {
+      console.log('Stripe JS API file loaded.');
+    } else {
+      console.log('Problem: Stripe JS API file not loaded.');
+    }
+
+    Stripe.setPublishableKey('<%= STRIPE_PUBLIC_KEY %>');
+    console.log('set stripe pub key');
+    var subscription = {
+      setupForm: function() {
+        return $('.card_form').submit(function() {
+          console.log('Form Submitted');
+          $('input[type=submit]').prop('disabled', true);
+          subscription.processCard();
+          return false;
+        });
+      },
+
+      processCard: function() {
+        var card;
+        card = {
+          name: $('#user_name').val(),
+          number: $('#card_number').val(),
+          cvc: $('#card_code').val(),
+          expMonth: $('#card_month').val(),
+          expYear: $('#card_year').val()
+        };
+        return Stripe.createToken(card, subscription.handleStripeResponse);
+      },
+
+      handleStripeResponse: function(status, response) {
+        if (status === 200) {
+          return alert('Stripe response: ' + response.id);
+        } else {
+          return alert('Stripe response: ' + response.error.message);
+        }
+      }
+    };
+    return subscription.setupForm();
+  });
+});
+
